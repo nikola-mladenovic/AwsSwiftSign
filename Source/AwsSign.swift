@@ -4,7 +4,7 @@ import CryptoSwift
 public extension URLRequest {
     private static let kHMACShaTypeString = "AWS4-HMAC-SHA256"
     private static let kAWS4Request = "aws4_request"
-    private static let kAllowedCharacters = CharacterSet.alphanumerics.union(CharacterSet(charactersIn: "\\-_.~"))
+    private static let kAllowedCharacters = CharacterSet(charactersIn: "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_.~")
 
     private static let iso8601Formatter: DateFormatter = {
         let formatter = DateFormatter()

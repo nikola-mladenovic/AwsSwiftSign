@@ -16,9 +16,8 @@ public extension URLRequest {
     }()
     private var currentIso8601Date: (full: String, short: String) {
         let date = URLRequest.iso8601Formatter.string(from: Date())
-        let index = date.index(date.startIndex, offsetBy: 8)
-        let shortDate = date.substring(to: index)
-        return (full: date, short: shortDate)
+        let shortDate = date[...String.Index(encodedOffset: 7)]
+        return (full: date, short: String(shortDate))
     }
 
     public mutating func sign(accessKeyId: String, secretAccessKey: String) throws {

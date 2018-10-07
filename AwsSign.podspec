@@ -16,6 +16,6 @@ Pod::Spec.new do |s|
   s.tvos.deployment_target = '9.0'
   s.watchos.deployment_target = '2.2'
 
-  s.dependency 'CryptoSwift', '~> 0.8'
+  s.dependency 'CryptoSwift', '~> 0.12'
 
 end

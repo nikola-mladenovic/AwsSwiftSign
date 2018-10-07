@@ -4,7 +4,7 @@ AwsSign is a Swift library that enables you to sign `URLRequest`s using Signatur
 
 <p>
     <a href="https://developer.apple.com/swift/" target="_blank">
-        <img src="https://img.shields.io/badge/Swift-4.1-orange.svg?style=flat" alt="Swift 4.1">
+        <img src="https://img.shields.io/badge/Swift-4.2-orange.svg?style=flat" alt="Swift 4.2">
     </a>
     <a href="https://developer.apple.com/swift/" target="_blank">
         <img src="https://img.shields.io/badge/Platforms-iOS%20%7C%20macOS%20%7C%20watchOS%20%7C%20tvOS%20%7C%20Linux-4E4E4E.svg?colorA=EF5138" alt="Platforms iOS | macOS | watchOS | tvOS | Linux">
@@ -14,7 +14,7 @@ AwsSign is a Swift library that enables you to sign `URLRequest`s using Signatur
     </a>
 </p>
 
-This package builds with Swift Package Manager. Ensure you have installed and activated the latest Swift 4.1 tool chain.
+This package builds with Swift Package Manager. Ensure you have installed and activated the latest Swift 4.2 tool chain.
 
 ## Quick Start
 

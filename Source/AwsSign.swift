@@ -14,6 +14,7 @@ public extension URLRequest {
         formatter.dateFormat = "yyyyMMdd'T'HHmmssXXXXX"
         return formatter
     }()
+	
     private var currentIso8601Date: (full: String, short: String) {
         let date = URLRequest.iso8601Formatter.string(from: Date())
         let shortDate = date[...String.Index(encodedOffset: 7)]
@@ -26,7 +27,7 @@ public extension URLRequest {
         guard hostComponents.count > 3 else { throw SignError.generalError(reason: "Incorrect host format. The host should contain service name and region, e.g sns.us-east-1.amazonaws.com") }
 
         let serviceName = hostComponents[0]
-        let awsRegion = hostComponents[1]
+        let awsRegion = host.starts(with: "iam") ? "us-east-1" : hostComponents[1]
 
         var body = ""
         if let bodyData = httpBody, let bodyString = String(data: bodyData, encoding: .utf8) {

@@ -19,7 +19,7 @@ public extension URLRequest {
     }()
     private var currentIso8601Date: (full: String, short: String) {
         let date = URLRequest.iso8601Formatter.string(from: Date())
-        let shortDate = date[...String.Index(encodedOffset: 7)]
+        let shortDate = date[...String.Index(utf16Offset: 7, in: date)]
         return (full: date, short: String(shortDate))
     }
 
